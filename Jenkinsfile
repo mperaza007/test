@@ -33,16 +33,16 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t cicd-demo .'
+                bat 'docker build -t testPipeLineJenkins .'
             }
         }
 
         stage('Deploy Container') {
             steps {
                 bat '''
-                docker stop cicd-demo || exit 0
-                docker rm cicd-demo || exit 0
-                docker run -d --name cicd-demo -p 8081:8080 cicd-demo
+                docker stop testPipeLineJenkins || exit 0
+                docker rm testPipeLineJenkins || exit 0
+                docker run -d --name testPipeLineJenkins -p 8081:8080 testPipeLineJenkins
                 '''
             }
         }
