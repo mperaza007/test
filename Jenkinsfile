@@ -33,16 +33,16 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t testpipelinejenkins .'
+                bat 'docker build -t test-pipe-line-jenkins .'
             }
         }
 
         stage('Deploy Container') {
             steps {
                 bat '''
-                docker stop testPipeLineJenkins || exit 0
-                docker rm testPipeLineJenkins || exit 0
-                docker run -d --name testPipeLineJenkins -p 8081:8080 testPipeLineJenkins
+                docker stop test-pipe-line-jenkins || exit 0
+                docker rm test-pipe-line-jenkins || exit 0
+                docker run -d --name test-pipe-line-jenkins -p 8081:8080 testPipeLineJenkins
                 '''
             }
         }
