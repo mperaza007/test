@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t testPipeLineJenkins .'
+                bat 'docker build -t testpipelinejenkins .'
             }
         }
 
