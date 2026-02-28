@@ -5,7 +5,7 @@ public class App {
         return a + b;
     }
 
-    public static void main(String[] args){
-        System.out.println("App running...");
+    public static void main(String[] args) {
+            System.out.println("App running...");
     }
 }
