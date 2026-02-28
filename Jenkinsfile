@@ -42,7 +42,7 @@ pipeline {
                 bat '''
                 docker stop test-pipe-line-jenkins || exit 0
                 docker rm test-pipe-line-jenkins || exit 0
-                docker run -d --name test-pipe-line-jenkins -p 8081:8080 test-pipe-linejenkins
+                docker run -d --name test-pipe-line-jenkins -p 8081:8080 test-pipe-line-jenkins
                 '''
             }
         }
